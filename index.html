@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffd1dc, #ffe5ec);
+      color: #3c3c3c;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 1.4em;
+    }
+    .date {
+      font-size: 1.2em;
+      color: #777;
+      margin-top: -20px;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #555;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      border-radius: 50%;
+    }
+    .heart:before {
+      top: -10px;
+      left: 0;
+    }
+    .heart:after {
+      top: 0;
+      left: -10px;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); }
+      100% { transform: translateY(-10vh) rotate(45deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday, My Love 💖</h1>
+    <div class="date">July 23</div>
+    <h2>On this special day, I just want to remind you how much you mean to me.<br>
+      You're the light in my world and the beat of my heart.
+    </h2>
+    <div class="gallery">
+      <img src="FB_IMG_1753189814144.jpg" alt="Photo 1">
+      <img src="FB_IMG_1753189771713.jpg" alt="Photo 2">
+      <img src="FB_IMG_1753189768630.jpg" alt="Photo 3">
+      <img src="A_digital_illustration_in_a_semi-realistic_style_w.png" alt="Digital Art">
+    </div>
+    <div class="footer">
+      With all my love,<br>
+      <strong>Nabil</strong>
+    </div>
+  </div>
+  <div class="hearts">
+    <!-- Add 50 hearts -->
+    <script>
+      for(let i = 0; i < 50; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.top = Math.random() * 100 + 'vh';
+        heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+        document.querySelector('.hearts').appendChild(heart);
+      }
+    </script>
+  </div>
+</body>
+</html>
